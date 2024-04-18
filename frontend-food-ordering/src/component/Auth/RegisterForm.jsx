@@ -5,6 +5,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import {FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { registerUser } from '../State/Authentication/Action';
+import { useDispatch } from 'react-redux';
 
 const initialValues={
   fullName:"",
@@ -15,8 +17,10 @@ const initialValues={
 
 const RegisterForm = () => {
   const navigate=useNavigate()
+  const dispatch=useDispatch()
   const handleSubmit=(values)=>{
     console.log('form values', values)
+    dispatch(registerUser({userData:values,navigate}))
   }
   return (
     <div>
