@@ -15,6 +15,7 @@ const RestaurantCard = ({item}) => {
   const handleAddToFavorite=()=>{
     dispatch(addToFavorite({restaurantId:item.id,jwt}))
   }
+  
   const handleNavigateToRestaurant=()=>{
     if(item.open){
       navigate(`/restaurant/${item.address.city}/${item.name}/${item.id}`)
@@ -25,7 +26,7 @@ const RestaurantCard = ({item}) => {
         <div className={`${true?'cursor-pointer':"cursor-not-allowed"} relative`}>
           <img
           className='w-full h-[10rem] rounded-t-md object-cover'
-          src={item.images[1]}
+          src={item.images[0]}
           alt=""
           />  
           <Chip 
