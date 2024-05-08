@@ -8,8 +8,8 @@ const OrderCard = ({item, order}) => {
         <div className='flex items-center space-x-5'>
             <img 
             className='h-16 w-16'
-            // src={item.food.images[0]}
-            src='https://images.pexels.com/photos/845798/pexels-photo-845798.jpeg?auto=compress&cs=tinysrgb&w=600'
+            src={item.food.images[0]}
+            // src='https://images.pexels.com/photos/845798/pexels-photo-845798.jpeg?auto=compress&cs=tinysrgb&w=600'
             alt="" 
             />
             <div>

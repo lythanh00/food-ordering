@@ -1,5 +1,6 @@
-import { api } from "../../../config/api";
 
+
+import { api } from "../../config/api";
 import {
   GET_INGREDIENTS,
   UPDATE_STOCK,

@@ -25,7 +25,7 @@ export const registerUser = (reqData) => async (dispatch) => {
     );
     if (data.jwt) localStorage.setItem("jwt", data.jwt);
     if (data.role === "ROLE_RESTAURANT_OWNER") {
-      reqData.navigate("/admin/restaurant");
+      reqData.navigate("/admin/restaurants");
     } else {
       reqData.navigate("/");
     }
@@ -46,7 +46,7 @@ export const loginUser = (reqData) => async (dispatch) => {
     );
     if (data.jwt) localStorage.setItem("jwt", data.jwt);
     if (data.role === "ROLE_RESTAURANT_OWNER") {
-      reqData.navigate("/admin/restaurant");
+      reqData.navigate("/admin/restaurants");
     } else {
       reqData.navigate("/");
     }
